@@ -12,36 +12,126 @@
       <h1 class="mb-5">Bootstrap Grid Columns</h1>
 
       <!-- Basic Grid Layout -->
+      <div class="row">
+        <div class="col bg-light border">1 of 2</div>
+        <div class="col bg-light border">2 of 2</div>
+      </div>
+      <div class="row">
+        <div class="col bg-light border">1 of 3</div>
+        <div class="col bg-light border">2 of 3</div>
+        <div class="col bg-light border">3 of 3</div>
+      </div>
 
       <br /><br />
-
       <!-- Column Sizes -->
+
+      <div class="row">
+        <div class="col-6 bg-light border">1 of 2</div>
+        <div class="col-6 bg-light border">2 of 2</div>
+      </div>
+
+      <div class="row">
+        <div class="col-4 bg-light border">1 of 2</div>
+        <div class="col-8 bg-light border">2 of 2</div>
+      </div>
 
       <br /><br />
 
       <!-- Responsive Grid -->
+      <div class="row">
+        <div class="col-md-6 bg-light border">1 of 2</div>
+        <div class="col-md-6 bg-light border">2 of 2</div>
+      </div>
+
+      <br />
+      <br />
+      <!-- Responsive Grid 4 columns on large screeens, each taking up 3/12'th -->
+      <div class="row">
+        <div class="col-sm-6 col-lg-3 bg-light border">1 of 4</div>
+        <div class="col-sm-6 col-lg-3 bg-light border">2 of 4</div>
+        <div class="col-sm-6 col-lg-3 bg-light border">3 of 4</div>
+        <div class="col-sm-6 col-lg-3 bg-light border">4 of 4</div>
+      </div>
 
       <br /><br />
 
-      <!-- Row Cols -->
+      <!-- Row Cols - will put every thing into specifyed nr of columns at each brekapoint -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        <div class="col bg-light border">Column</div>
+        <div class="col bg-light border">Column</div>
+        <div class="col bg-light border">Column</div>
+        <div class="col bg-light border">Column</div>
+        <div class="col bg-light border">Column</div>
+      </div>
 
       <br /><br />
 
       <br /><br />
 
-      <!-- Nesting -->
+      <!-- Nesting - Make a row with two columns inside a column -->
+      <p>nested</p>
+      <div class="row">
+        <div class="col bg-light border p-3">Column</div>
+        <div class="col bg-light border p-3">Column</div>
+        <div class="col bg-light border p-3">
+          <div class="row">
+            <div class="col text-bg-dark">Nest</div>
+            <div class="col text-bg-dark">Nest</div>
+          </div>
+        </div>
+      </div>
 
       <br /><br />
 
-      <!-- Gutters -->
+      <!-- Gutters - space between columns inside the row - 4 is default. can be 0-5 -->
+      <p>gutters</p>
+      <div class="row g-5">
+        <div class="col-md-4">
+          <div class="p-3 text-bg-primary">Content Item</div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 text-bg-primary">Content Item</div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 text-bg-primary">Content Item</div>
+        </div>
+      </div>
 
       <br /><br />
 
       <!-- Offsetting Columns -->
+      <p>Offset - pushed the element 4 spaces out of 12</p>
+      <div class="row">
+        <div class="col-md-4 offset-4">
+          <div class="p-3 text-bg-primary">Content Item</div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 text-bg-primary">Content Item</div>
+        </div>
+      </div>
+
+      <br /><br />
+      <!-- Offset to put element in center -->
+      <p>
+        offset the element which tokes col 6 out of 12. offset it 3 so that the
+        first 3 out of 12 is empty. This will look weird on devices at the md
+        breakpoint. One way to overcome that is to place an empty col after the
+        column with the content.
+      </p>
+      <div class="row">
+        <div class="col-md-6 offset-3 bg-light border">Hello world</div>
+      </div>
 
       <br /><br />
 
       <!-- Ordering -->
+      <p>Ordering</p>
+      <div class="row">
+        <div class="col bg-light border order-2">Column 1</div>
+        <div class="col bg-light border order-4">Column 2</div>
+        <div class="col bg-light border order-1">Column 3</div>
+        <div class="col bg-light border order-3">Column 4</div>
+      </div>
 
       <!-- Don't go past here -->
     </div>
